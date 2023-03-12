@@ -8,6 +8,8 @@
 #include <stdlib.h>
 
 
+void flushBuffer();
+
 void calculer_rendu_monnaie(int , int) ;
 
 

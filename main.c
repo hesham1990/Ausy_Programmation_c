@@ -4,9 +4,11 @@ int main()
 {
     int choix = 0;
     int  prix = 0, montant_paye = 0, montant_reste=0;
-
+ flushBuffer();
+  
     do
     {
+ 	
         printf("\n-------------MENU----------------\n");
         printf("1 - Entrez le prix de l'article , le montant paye et claculez le rendre\n");
         printf("0 - Quitter\n");

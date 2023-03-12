@@ -92,7 +92,12 @@ else
 
 */
 
-
+void flushBuffer(void)
+{
+	int c = 0;
+	while(c != '\n' && c != EOF)
+	c = getchar();
+}
 
 void calculer_rendu_monnaie(int prix, int  montant_paye) {
     int billets[] = {20, 10, 5};
