@@ -91,76 +91,48 @@ void flushBuffer(void)
 
 
 
-void calculer_rendu_monnaie(int prix, int  montant_paye) {
+void calculer_rendu_monnaie(int prix, int  montant_paye) 
+
+{
     int billets[] = {20, 10, 5};
     float pieces[] = {2, 1};
     float montant_rendu = montant_paye - prix;
     int i;
 
-    if (montant_paye < prix) {
-        printf("Le montant paye est insuffisant.\n");
-        return;
-    } else if (montant_paye == prix) {
-        printf("Pas de monnaie a rendre.\n");
-        return;
-    }
+    if (montant_paye < prix)
+            {
+                  printf("Le montant paye est insuffisant.\n");
+                   
+             } else if (montant_paye == prix)
+			{
+                   	printf("Pas de monnaie a rendre.\n");
+    			}
 
-    printf("\n_____Montant a rendre_____\n");
+         printf("\n_____Montant a rendre_____\n");
 
-    for (i = 0; i < 3; i++) {
+    for (i = 0; i < 3; i++) 
+    {
         int nombre_billets = montant_rendu / billets[i];
 
-        if (nombre_billets > 0) {
+        if (nombre_billets > 0)
+	 {
             printf("%d billet(s) de %d euros\n", nombre_billets, billets[i]);
             montant_rendu -= nombre_billets * billets[i];
-        }
+         }
     }
 
-    for (i = 0; i < 2; i++) {
+    for (i = 0; i < 2; i++) 
+    {
         int nombre_pieces = montant_rendu / pieces[i];
-        if (nombre_pieces > 0) {
+        if (nombre_pieces > 0) 
+	{
             printf("%d pice(s) de %.1f euros\n", nombre_pieces, pieces[i]);
             montant_rendu -= nombre_pieces * pieces[i];
         }
     }
+ 
 }
 
 
 
 
-/*
-void calculer_rendu_monnaie(float prix, float  montant_paye) {
-    int billets[] = {50,20, 10, 5};
-    float pieces[] = {2,1 ,0.5 ,0.2 ,0.1 , 0.05 ,0.01};
-    float montant_rendu = montant_paye - prix;
-    int i;
-
-    if (montant_paye < prix) {
-        printf("Le montant paye est insuffisant.\n");
-        return;
-    } else if (montant_paye == prix) {
-        printf("Pas de monnaie a rendre.\n");
-        return;
-    }
-
-    printf("\n_____Montant a rendre_____\n");
-
-    for (i = 0; i < 4; i++) {
-        int nombre_billets = montant_rendu / billets[i];
-
-        if (nombre_billets > 0) {
-            printf("%d billet(s) de %d euros\n", nombre_billets, billets[i]);
-            montant_rendu -= nombre_billets * billets[i];
-        }
-    }
-
-    for (i = 0; i <7; i++) {
-        int nombre_pieces = montant_rendu / pieces[i];
-        if (nombre_pieces > 0) {
-            printf("%d pice(s) de %.3f euros\n", nombre_pieces, pieces[i]);
-            montant_rendu -= nombre_pieces * pieces[i];
-        }
-    }
-}
-
-*/
