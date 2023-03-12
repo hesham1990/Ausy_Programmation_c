@@ -1,6 +1,6 @@
 #include "entete.h"
 
-
+/*
 void calculer_rendu_monnaie(int prix, int montant_paye)
 
 {
@@ -81,7 +81,7 @@ else
 }
 
 
-
+*/
 void flushBuffer(void)
 {
 	int c = 0;
@@ -90,7 +90,7 @@ void flushBuffer(void)
 }
 
 
-/*
+
 void calculer_rendu_monnaie(int prix, int  montant_paye) {
     int billets[] = {20, 10, 5};
     float pieces[] = {2, 1};
@@ -126,7 +126,7 @@ void calculer_rendu_monnaie(int prix, int  montant_paye) {
 }
 
 
-*/
+
 
 /*
 void calculer_rendu_monnaie(float prix, float  montant_paye) {
