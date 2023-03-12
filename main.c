@@ -4,7 +4,7 @@ int main()
 {
     int choix = 0;
     int  prix = 0, montant_paye = 0, montant_reste=0;
- flushBuffer();
+//flushBuffer();
   
     do
     {
